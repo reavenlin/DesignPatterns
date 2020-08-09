@@ -1,0 +1,7 @@
+@startuml
+class A{
+    - B b
+}
+class B
+A *-- B
+@enduml

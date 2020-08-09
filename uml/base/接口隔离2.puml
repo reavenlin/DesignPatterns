@@ -1,0 +1,48 @@
+@startuml
+interface I1 {
+    fn1()
+}
+interface I2 {
+    fn2()
+    fn3()
+}
+interface I3 {
+    fn4()
+    fn5()
+}
+
+class A{
+    + callFn1()
+    + callFn2()
+    + callFn3()
+}
+
+class B {
+    fn1()
+    fn2()
+    fn3()
+}
+
+class C{
+    + callFn1()
+    + callFn4()
+    + callFn5()
+}
+
+class D {
+    fn1()
+    fn4()
+    fn5()
+}
+
+I1 <|.. B
+I2 <|.. B
+I1 <|.. D
+I3 <|.. D
+
+I1 <-- A
+I2 <-- A
+I1 <-- C
+I3 <-- C
+
+@enduml

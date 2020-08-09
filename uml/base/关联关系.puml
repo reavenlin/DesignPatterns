@@ -1,0 +1,49 @@
+@startuml
+
+class A {
+    - B b
+}
+
+class B
+
+B <-- A : "单向关联"
+
+
+
+
+class C {
+    - D d
+}
+
+class D
+
+D - C : "双向关联"
+
+
+class E {
+    - E e
+}
+E - E : "自身关联"
+
+
+
+class C1{
+    - C2 c2
+    - C3 c3
+}
+
+class C2{
+    - C1 c1
+    - C3 c3
+}
+
+class C3{
+    - C1 c1
+    - C2 c2
+}
+
+C1 - C2
+C1 - C3
+C2 - C3
+
+@enduml
